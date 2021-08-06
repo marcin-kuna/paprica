@@ -2,9 +2,13 @@
   <div class="container">
     <header class="header">
       <router-link to="/">
-        <img src="../assets/logos/logo.svg" alt="Kazus logo" />
+        <img
+          class="header__logo"
+          src="../assets/logos/logo.svg"
+          alt="Kazus logo"
+        />
       </router-link>
-      <nav class="header__nav">
+      <nav v-if="!isMobile" class="header__nav">
         <ul class="header__nav-links">
           <li :key="link.id" v-for="link in links">
             <router-link class="header__nav-link" :to="link.path">{{
@@ -30,6 +34,7 @@
           </button>
         </div>
       </nav>
+      <img v-if="isMobile" src="../assets/icons/hamburger.svg" alt="" />
     </header>
     <Modal v-show="isModalVisible" @close="closeModal" />
   </div>
@@ -47,6 +52,7 @@ export default {
       links: [],
       icons: [],
       isModalVisible: false,
+      isMobile: false,
     };
   },
   methods: {
@@ -55,6 +61,9 @@ export default {
     },
     closeModal() {
       this.isModalVisible = false;
+    },
+    onResize() {
+      this.isMobile = window.innerWidth < 992;
     },
   },
   created() {
@@ -91,7 +100,7 @@ export default {
       },
       {
         id: 7,
-        path: "/",
+        path: "/api",
         title: "Kontakt",
       },
     ];
@@ -113,6 +122,10 @@ export default {
       },
     ];
   },
+  mounted() {
+    this.onResize();
+    window.addEventListener("resize", this.onResize, { passive: true });
+  },
 };
 </script>
 
@@ -133,6 +146,7 @@ export default {
     li {
       list-style-type: none;
       margin-right: 17px;
+      white-space: nowrap;
     }
   }
 
@@ -180,6 +194,30 @@ export default {
     position: absolute;
     top: 8px;
     right: 3px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .header__nav-links {
+    li {
+      margin-right: 12px;
+    }
+  }
+
+  .header__panel {
+    margin-left: 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .header__logo {
+    width: 130px;
+  }
+}
+
+@media (max-width: 576px) {
+  .header__logo {
+    width: 110px;
   }
 }
 </style>

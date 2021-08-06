@@ -3,10 +3,6 @@
     <Header />
     <router-view />
   </div>
-  <!-- <div id="nav">
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-  </div> -->
 </template>
 
 <script>
@@ -32,6 +28,7 @@ $ff-primary: "Roboto", sans-serif;
 }
 
 .container {
+  width: 90vw;
   max-width: 1208px;
   margin: 0 auto;
   position: relative;

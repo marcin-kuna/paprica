@@ -256,4 +256,103 @@ export default {
     }
   }
 }
+
+@media (max-width: 1400px) {
+  .hero__image {
+    right: 0;
+  }
+}
+
+@media (max-width: 1200px) {
+  .hero__text-container {
+    p {
+      line-height: 1.4;
+    }
+  }
+}
+
+@media (max-width: 992px) {
+  .magazines {
+    h2 {
+      font-size: 34px;
+      margin: 20px 0 45px;
+    }
+
+    &__list {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  .hero {
+    padding-top: 30px;
+
+    &__image {
+      width: 430px;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    padding-top: 25px;
+
+    &__text-container {
+      width: 80%;
+      display: block;
+
+      p {
+        margin-bottom: 15px;
+      }
+
+      h1 {
+        font-size: 42px;
+        margin-bottom: 10px;
+      }
+    }
+
+    &__image {
+      width: 300px;
+      right: -5%;
+      top: 58%;
+    }
+  }
+
+  .magazines__title {
+    font-size: 16px;
+  }
+
+  .magazines__price {
+    font-size: 20px;
+  }
+
+  .magazines__list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 576px) {
+  .hero__text-container {
+    width: 100%;
+    text-align: center;
+
+    p:last-child {
+      display: none;
+    }
+
+    h1 {
+      font-size: 36px;
+    }
+  }
+
+  .hero__image {
+    right: calc(45% - 150px);
+    top: 40%;
+  }
+
+  .magazines {
+    h2 {
+      font-size: 28px;
+    }
+  }
+}
 </style>

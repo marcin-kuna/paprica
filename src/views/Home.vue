@@ -1,6 +1,7 @@
 <template>
   <div class="home">
-    <h2>Click on "Czasopisma" (Header/Nav) to see view from the mockup</h2>
+    <h2>Click on "Czasopisma" to see view from the mockup (task 1)</h2>
+    <h2>Click on "Kontakt" to see view of the API (task 2)</h2>
   </div>
 </template>
 
@@ -18,5 +19,6 @@ export default {
   width: 100vw;
   height: calc(100vh - 90px);
   @include flex-center;
+  flex-direction: column;
 }
 </style>

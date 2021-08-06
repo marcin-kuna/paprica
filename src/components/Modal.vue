@@ -232,4 +232,19 @@ export default {
     }
   }
 }
+
+@media (max-width: 992px) {
+  .cart {
+    width: 50vw;
+    height: 100vh;
+    top: 0;
+    right: -5vw;
+  }
+}
+
+@media (max-width: 768px) {
+  .cart {
+    width: 75vw;
+  }
+}
 </style>
