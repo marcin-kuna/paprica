@@ -20,7 +20,7 @@ export default {
 </script>
 
 <style lang="scss">
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap");
 
 $ff-primary: "Roboto", sans-serif;
 
@@ -34,5 +34,6 @@ $ff-primary: "Roboto", sans-serif;
 .container {
   max-width: 1208px;
   margin: 0 auto;
+  position: relative;
 }
 </style>

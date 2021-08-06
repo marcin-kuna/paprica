@@ -17,7 +17,7 @@
             class="header__panel-btn"
             :key="icon.id"
             v-for="icon in icons"
-            v-on="{ click: icon.clickable ? onClick : null }"
+            v-on="{ click: icon.clickable ? showModal : null }"
           >
             <img
               :src="require(`../assets/icons/${icon.name}.svg`)"
@@ -31,21 +31,30 @@
         </div>
       </nav>
     </header>
+    <Modal v-show="isModalVisible" @close="closeModal" />
   </div>
 </template>
 
 <script>
+import Modal from "./Modal.vue";
 export default {
   name: "Header",
+  components: {
+    Modal,
+  },
   data() {
     return {
       links: [],
       icons: [],
+      isModalVisible: false,
     };
   },
   methods: {
-    onClick() {
-      console.log("click");
+    showModal() {
+      this.isModalVisible = true;
+    },
+    closeModal() {
+      this.isModalVisible = false;
     },
   },
   created() {

@@ -53,12 +53,16 @@
         </div>
       </div>
     </section>
+    <Pagination />
   </div>
 </template>
 
 <script>
+import Pagination from "../components/Pagination.vue";
+
 export default {
   name: "Magazines",
+  components: { Pagination },
   data() {
     return {
       magazines: [],
