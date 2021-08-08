@@ -1,24 +1,7 @@
-# frontend-test
+1. Click on "Czasopisma" to see view from the mockup (task 1)
+2. Click on cart button to see Cart Modal (task 1)
+3. Click on "Kontakt" to see view of the API (task 2)
 
-## Project setup
-```
-npm install
-```
+# TODO
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
-
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+1. Break bigger views/components into smaller components

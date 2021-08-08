@@ -58,9 +58,11 @@ export default {
   methods: {
     showModal() {
       this.isModalVisible = true;
+      document.documentElement.style.overflow = "hidden";
     },
     closeModal() {
       this.isModalVisible = false;
+      document.documentElement.style.overflow = "auto";
     },
     onResize() {
       this.isMobile = window.innerWidth < 992;

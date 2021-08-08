@@ -9,7 +9,6 @@
         <div class="post__delete" @click="deletePost(post.id)">x</div>
       </div>
     </div>
-    <button @click="getSession()">get session</button>
   </div>
 </template>
 
@@ -27,21 +26,14 @@ export default {
         .then((response) => response.json())
         .then((data) => {
           this.posts = data;
-          localStorage.setItem("data", JSON.stringify(this.posts));
         });
     },
     deletePost(id) {
       this.posts = this.posts.filter((post) => post.id !== id);
-      localStorage.setItem("data", JSON.stringify(this.posts));
-    },
-
-    getStorage() {
-      this.posts = JSON.parse(localStorage.getItem("data"));
     },
   },
   created() {
     this.getPosts();
-    this.getStorage();
   },
 };
 </script>

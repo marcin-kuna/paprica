@@ -288,6 +288,13 @@ export default {
 
     &__image {
       width: 430px;
+      top: 15%;
+    }
+
+    &__text-container {
+      h1 {
+        font-size: 42px;
+      }
     }
   }
 }
@@ -305,7 +312,6 @@ export default {
       }
 
       h1 {
-        font-size: 42px;
         margin-bottom: 10px;
       }
     }
